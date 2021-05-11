@@ -73,8 +73,6 @@ function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...rest }) 
                 className={classNames('intro__name', `intro__name--${status}`)}
                 id={titleId}
               >
-
-            {/* HAMISH WILLIAMS  */}
                 <DecoderText text="Chao Zhang" start={!prerender} delay={300} />
               </h1>
               <Heading level={0} as="h2" className="intro__title">
