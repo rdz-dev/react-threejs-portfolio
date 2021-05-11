@@ -6,23 +6,26 @@ import Profile from 'pages/Home/Profile';
 import Footer from 'components/Footer';
 import { usePrefersReducedMotion, useRouteTransition } from 'hooks';
 import { useLocation } from 'react-router-dom';
+import codingFunImage from 'assets/codingfun.png';
+import phoneBoxImage from 'assets/phonebox.png';
+import reactThree from 'assets/react-three.png';
 import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
 import sprTexture from 'assets/spr-lesson-builder-dark.jpg';
-import sprTextureLarge from 'assets/spr-lesson-builder-dark-large.jpg';
-import gamestackTexturePlaceholder from 'assets/gamestack-login-placeholder.jpg';
-import gamestackTexture from 'assets/gamestack-login.jpg';
-import gamestackTextureLarge from 'assets/gamestack-login-large.jpg';
-import gamestackTexture2Placeholder from 'assets/gamestack-list-placeholder.jpg';
-import gamestackTexture2 from 'assets/gamestack-list.jpg';
-import gamestackTexture2Large from 'assets/gamestack-list-large.jpg';
+// import sprTextureLarge from 'assets/spr-lesson-builder-dark-large.jpg';
+// import gamestackTexturePlaceholder from 'assets/gamestack-login-placeholder.jpg';
+// import gamestackTexture from 'assets/gamestack-login.jpg';
+// import gamestackTextureLarge from 'assets/gamestack-login-large.jpg';
+// import gamestackTexture2Placeholder from 'assets/gamestack-list-placeholder.jpg';
+// import gamestackTexture2 from 'assets/gamestack-list.jpg';
+// import gamestackTexture2Large from 'assets/gamestack-list-large.jpg';
 import sliceTexture from 'assets/slice-app.jpg';
-import sliceTextureLarge from 'assets/slice-app-large.jpg';
+// import sliceTextureLarge from 'assets/slice-app-large.jpg';
 import sliceTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
 import iphone11 from 'assets/iphone-11.glb';
 import macbookPro from 'assets/macbook-pro.glb';
 import './index.css';
 
-const disciplines = ['Developer', 'Prototyper', 'Animator', 'Illustrator', 'Modder'];
+const disciplines = ['Designer', 'Instructor', 'Gamer'];
 
 const Home = () => {
   const { status } = useRouteTransition();
@@ -34,11 +37,11 @@ const Home = () => {
   const projectOne = useRef();
   const projectTwo = useRef();
   const projectThree = useRef();
-  const details = useRef();
+  const about = useRef();
   const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
-    const revealSections = [intro, projectOne, projectTwo, projectThree, details];
+    const revealSections = [intro, projectOne, projectTwo, projectThree, about];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -81,7 +84,7 @@ const Home = () => {
 
     const handleHashchange = (hash, scroll) => {
       clearTimeout(scrollTimeout);
-      const hashSections = [intro, projectOne, details];
+      const hashSections = [intro, projectOne, about];
       const hashString = hash.replace('#', '');
       const element = hashSections.filter(item => item.current.id === hashString)[0];
       if (!element) return;
@@ -138,11 +141,10 @@ const Home = () => {
   return (
     <div className="home">
       <Helmet>
-        <title>Hamish Williams | Designer + Developer</title>
+        <title>Chao Zhang | Developer</title>
         <meta
           name="description"
-          content="Portfolio of Hamish Williams – a digital designer working on web &amp; mobile
-          apps with a focus on motion and user experience design."
+          content="Portfolio of Chao Zhang – a software developer focusing on front-end development and ui/ux design."
         />
         <link rel="prefetch" href={iphone11} as="fetch" crossorigin="" />
         <link rel="prefetch" href={macbookPro} as="fetch" crossorigin="" />
@@ -158,23 +160,23 @@ const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Designing the future of education"
-        description="Designing a platform to help educators build better online courseware"
-        buttonText="View Project"
-        buttonLink="/projects/smart-sparrow"
+        title="Telecommunication E-Commerce"
+        description="Marketing site, sim card activation application and account self services area."
+        buttonText="View Website"
+        buttonLink="https://gophonebox.com"
         model={{
           type: 'laptop',
-          alt: 'Smart Sparrow lesson builder',
+          alt: 'PhoneBox',
           textures: [
             {
               src: sprTexture,
-              srcSet: `${sprTexture} 800w, ${sprTextureLarge} 1440w`,
+              srcSet: `${phoneBoxImage} 800w, ${phoneBoxImage} 1440w`,
               placeholder: sprTexturePlaceholder,
             },
           ],
         }}
       />
-      <ProjectSummary
+      {/* <ProjectSummary
         id="project-2"
         alternate
         sectionRef={projectTwo}
@@ -200,32 +202,54 @@ const Home = () => {
             },
           ],
         }}
+      /> */}
+      <ProjectSummary
+        id="project-2"
+        alternate
+        sectionRef={projectTwo}
+        visible={visibleSections.includes(projectTwo.current)}
+        index={2}
+        title="Online Coding Learning Platform"
+        description="A platform to let students quickly learn the fundamental of different programming languages in a fun way."
+        buttonText="View Website"
+        buttonLink="https://codingfun.dev/"
+        model={{
+          type: 'laptop',
+          alt: 'CodingFun',
+          textures: [
+            {
+              src: sprTexture,
+              srcSet: `${codingFunImage} 800w, ${codingFunImage} 1440w`,
+              placeholder: sprTexturePlaceholder,
+            },
+          ],
+        }}
       />
       <ProjectSummary
         id="project-3"
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Biomedical image collaboration"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
-        buttonText="View Project"
-        buttonLink="/projects/slice"
+        title="Computer Graphics Three.js Demo"
+        description="A demo for computer graphics by react & three.js"
+        buttonText="View Website"
+        buttonLink="https://computer-graphics-playground.vercel.app/"
         model={{
           type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
+          alt: 'Computer Graphics Three.js Demo"',
           textures: [
             {
               src: sliceTexture,
-              srcSet: `${sliceTexture} 980w, ${sliceTextureLarge} 1376w`,
+              srcSet: `${reactThree} 980w, ${reactThree} 1376w`,
               placeholder: sliceTexturePlaceholder,
             },
           ],
         }}
       />
       <Profile
-        sectionRef={details}
-        visible={visibleSections.includes(details.current)}
-        id="details"
+        sectionRef={about}
+        visible={visibleSections.includes(about.current)}
+        id="about"
       />
       <Footer />
     </div>

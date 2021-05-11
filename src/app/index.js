@@ -17,21 +17,17 @@ import './index.css';
 
 const Home = lazy(() => import('pages/Home'));
 const Contact = lazy(() => import('pages/Contact'));
-const ProjectSPR = lazy(() => import('pages/SmartSparrow'));
-const ProjectSlice = lazy(() => import('pages/Slice'));
-const ProjectVolkihar = lazy(() => import('pages/VolkiharKnight'));
 // const Articles = lazy(() => import('pages/Articles'));
 const Page404 = lazy(() => import('pages/404'));
+// const ProjectSPR = lazy(() => import('pages/SmartSparrow'));
+// const ProjectSlice = lazy(() => import('pages/Slice'));
+// const ProjectVolkihar = lazy(() => import('pages/VolkiharKnight'));
 const Uses = lazy(() => import('pages/Uses'));
 
 export const AppContext = createContext();
 export const TransitionContext = createContext();
 
-const repoPrompt = `
-__  __  __
-\u005C \u005C \u005C \u005C \u005C\u2215\n \u005C \u005C\u2215\u005C \u005C\n  \u005C\u2215  \u005C\u2215
-\n\nTaking a peek huh? Check out the source code: https://github.com/HamishMW/portfolio
-`;
+const repoPrompt = ``;
 
 const App = () => {
   const [storedTheme] = useLocalStorage('theme', 'dark');
@@ -66,7 +62,7 @@ const AppRoutes = () => {
   return (
     <Fragment>
       <Helmet>
-        <link rel="canonical" href={`https://hamishw.com${pathname}`} />
+        <link rel="canonical" href={``} />
       </Helmet>
       <VisuallyHidden showOnFocus as="a" className="skip-to-main" href="#MainContent">
         Skip to main content
@@ -85,12 +81,14 @@ const AppRoutes = () => {
                   <Switch location={location}>
                     <Route exact path="/" component={Home} />
                     <Route path="/contact" component={Contact} />
-                    <Route path="/projects/smart-sparrow" component={ProjectSPR} />
-                    <Route path="/projects/slice" component={ProjectSlice} />
-                    <Route path="/projects/volkihar-knight" component={ProjectVolkihar} />
-                    {/* <Route path="/articles" component={Articles} /> */}
-                    <Route path="/uses" component={Uses} />
+                    <Route path="/research" component={Uses} />
+                    {/* <Route path="/research" component={Articles} /> */}
+                    {/* <Route path="/uses" component={Uses} /> */}
                     <Route component={Page404} />
+
+                    {/* <Route path="/projects/smart-sparrow" component={ProjectSPR} />
+                    <Route path="/projects/slice" component={ProjectSlice} />
+                    <Route path="/projects/volkihar-knight" component={ProjectVolkihar} /> */}
                   </Switch>
                 </Suspense>
               </div>

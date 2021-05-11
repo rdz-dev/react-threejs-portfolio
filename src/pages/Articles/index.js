@@ -77,7 +77,7 @@ const Articles = () => {
   return (
     <div className="articles">
       <Helmet>
-        <title>{`Articles | Hamish Williams Designer`}</title>
+        <title>{`Articles | Designer`}</title>
         <meta
           name="description"
           content="A collection of technical design and development articles."
@@ -119,11 +119,11 @@ const ArticlesRouter = () => {
             <Route
               exact
               key={slug}
-              path={`/articles/${slug}`}
+              path={`/research/${slug}`}
               render={() => <Post slug={slug} {...rest} />}
             />
           ))}
-          <Route exact component={Articles} path="/articles" />
+          <Route exact component={Articles} path="/research" />
           <Route component={Page404} />
         </Switch>
       </Suspense>

@@ -58,11 +58,12 @@ function Header(props) {
       <RouterLink
         className="navbar__logo"
         to={{ pathname: '/', hash: '#intro', state: hashKey }}
-        aria-label="Hamish Williams, Designer"
+        aria-label="Chao Zhang, Developer"
         onClick={handleMobileNavClick}
         onMouseUp={blurOnMouseUp}
       >
         <Monogram highlight />
+        {/* <p>chao</p> */}
       </RouterLink>
       <NavToggle onClick={() => dispatch({ type: 'toggleMenu' })} menuOpen={menuOpen} />
       <nav className="navbar__nav">

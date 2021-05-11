@@ -1,14 +1,14 @@
-import Link from 'components/Link';
+// import Link from 'components/Link';
 import './index.css';
 
 const Footer = () => (
   <footer className="footer">
     <span className="footer__date">
-      {`© ${new Date().getFullYear()} Hamish Williams.`}
+      {`© ${new Date().getFullYear()} Chao Zhang`}
     </span>
-    <Link secondary className="footer__link" href="/humans.txt" target="_self">
+    {/* <Link secondary className="footer__link" href="/humans.txt" target="_self">
       Crafted by yours truly
-    </Link>
+    </Link> */}
   </footer>
 );
 

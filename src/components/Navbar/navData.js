@@ -5,14 +5,14 @@ export const navLinks = [
     hash: '#project-1',
   },
   {
-    label: 'Details',
+    label: 'AboutMe',
     pathname: '/',
-    hash: '#details',
+    hash: '#about',
   },
-  // {
-  //   label: 'Articles',
-  //   pathname: '/articles',
-  // },
+  {
+    label: 'Research',
+    pathname: '/research',
+  },
   {
     label: 'Contact',
     pathname: '/contact',
@@ -20,19 +20,19 @@ export const navLinks = [
 ];
 
 export const socialLinks = [
-  {
-    label: 'Twitter',
-    url: 'https://twitter.com/hamishMW',
-    icon: 'twitter',
-  },
-  {
-    label: 'Figma',
-    url: 'https://www.figma.com/@Hamish',
-    icon: 'figma',
-  },
+  // {
+  //   label: 'Twitter',
+  //   url: 'https://twitter.com/hamishMW',
+  //   icon: 'twitter',
+  // },
+  // {
+  //   label: 'Figma',
+  //   url: 'https://www.figma.com/@Hamish',
+  //   icon: 'figma',
+  // },
   {
     label: 'Github',
-    url: 'https://github.com/HamishMW',
+    url: 'https://github.com/chaozhangdev',
     icon: 'github',
   },
 ];
