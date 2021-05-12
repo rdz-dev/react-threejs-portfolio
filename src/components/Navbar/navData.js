@@ -25,14 +25,14 @@ export const socialLinks = [
   //   url: 'https://twitter.com/hamishMW',
   //   icon: 'twitter',
   // },
-  // {
-  //   label: 'Figma',
-  //   url: 'https://www.figma.com/@Hamish',
-  //   icon: 'figma',
-  // },
   {
     label: 'Github',
     url: 'https://github.com/chaozhangdev',
     icon: 'github',
   },
+  // {
+  //   label: 'Linkedin',
+  //   url: 'https://www.linkedin.com/in/chao-zhang-727b8b15b/',
+  //   icon: 'linkedin',
+  // },
 ];

@@ -32,7 +32,7 @@ const Uses = () => {
         <ProjectBackground
           src={usesBackground}
           placeholder={usesBackgroundPlaceholder}
-          opacity={0.3}
+          opacity={0.8}
           entered={!prerender}
         />
         <ProjectHeader

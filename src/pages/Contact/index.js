@@ -14,7 +14,7 @@ import prerender from 'utils/prerender';
 import { msToNum, numToPx, numToMs } from 'utils/style';
 import { tokens } from 'components/ThemeProvider/theme';
 import Heading from 'components/Heading';
-import Text from 'components/Text';
+// import Text from 'components/Text';
 import './index.css';
 
 const initDelay = tokens.base.durationS;
@@ -105,101 +105,99 @@ const Contact = () => {
         />
       </Helmet>
       <TransitionGroup component={null}>
-        {!complete && (
-          <Transition appear mountOnEnter unmountOnExit timeout={1600} onEnter={reflow}>
-            {status => (
-              <form className="contact__form" method="post" onSubmit={onSubmit}>
-                <Heading
-                  className={classNames('contact__title', `contact__title--${status}`, {
-                    'contact__title--hidden': prerender,
-                  })}
-                  level={3}
-                  as="h1"
-                  style={getDelay(tokens.base.durationXS, initDelay, 0.3)}
-                >
-                  <DecoderText
-                    text="Hello"
-                    start={status !== 'exited' && !prerender}
-                    delay={300}
-                  />
-                </Heading>
-                <Divider
-                  className={classNames(
-                    'contact__divider',
-                    `contact__divider--${status}`,
-                    { 'contact__divider--hidden': prerender }
-                  )}
-                  style={getDelay(tokens.base.durationXS, initDelay, 0.4)}
+        
+        <Transition appear mountOnEnter unmountOnExit timeout={1600} onEnter={reflow}>
+          {status => (
+            <form className="contact__form" method="post" onSubmit={onSubmit}>
+              <Heading
+                className={classNames('contact__title', `contact__title--${status}`, {
+                  'contact__title--hidden': prerender,
+                })}
+                level={3}
+                as="h1"
+                style={getDelay(tokens.base.durationXS, initDelay, 0.3)}
+              >
+                <DecoderText
+                  text="Hello"
+                  start={status !== 'exited' && !prerender}
+                  delay={300}
                 />
-                <Input
-                  required
-                  className={classNames('contact__input', `contact__input--${status}`, {
-                    'contact__input--hidden': prerender,
-                  })}
-                  style={getDelay(tokens.base.durationXS, initDelay)}
-                  autoComplete="email"
-                  label="Your Email"
-                  type="email"
-                  maxLength={512}
-                  {...email}
-                />
-                <Input
-                  required
-                  multiline
-                  className={classNames('contact__input', `contact__input--${status}`, {
-                    'contact__input--hidden': prerender,
-                  })}
-                  style={getDelay(tokens.base.durationS, initDelay)}
-                  autoComplete="off"
-                  label="Message"
-                  maxLength={4096}
-                  {...message}
-                />
-                <TransitionGroup component={null}>
-                  {!!statusError && (
-                    <Transition timeout={msToNum(tokens.base.durationM)}>
-                      {errorStatus => (
-                        <div
-                          className={classNames(
-                            'contact__form-error',
-                            `contact__form-error--${errorStatus}`
-                          )}
-                          style={{
-                            '--height': isVisible(errorStatus)
-                              ? numToPx(errorRef.current?.getBoundingClientRect().height)
-                              : '0px',
-                          }}
-                        >
-                          <div className="contact__form-error-content" ref={errorRef}>
-                            <div className="contact__form-error-message">
-                              <Icon className="contact__form-error-icon" icon="error" />
-                              {statusError}
-                            </div>
+              </Heading>
+              <Divider
+                className={classNames('contact__divider', `contact__divider--${status}`, {
+                  'contact__divider--hidden': prerender,
+                })}
+                style={getDelay(tokens.base.durationXS, initDelay, 0.4)}
+              />
+              <Input
+                required
+                className={classNames('contact__input', `contact__input--${status}`, {
+                  'contact__input--hidden': prerender,
+                })}
+                style={getDelay(tokens.base.durationXS, initDelay)}
+                autoComplete="email"
+                label="Your Email"
+                type="email"
+                maxLength={512}
+                {...email}
+              />
+              <Input
+                required
+                multiline
+                className={classNames('contact__input', `contact__input--${status}`, {
+                  'contact__input--hidden': prerender,
+                })}
+                style={getDelay(tokens.base.durationS, initDelay)}
+                autoComplete="off"
+                label="Message"
+                maxLength={4096}
+                {...message}
+              />
+              <TransitionGroup component={null}>
+                {!!statusError && (
+                  <Transition timeout={msToNum(tokens.base.durationM)}>
+                    {errorStatus => (
+                      <div
+                        className={classNames(
+                          'contact__form-error',
+                          `contact__form-error--${errorStatus}`
+                        )}
+                        style={{
+                          '--height': isVisible(errorStatus)
+                            ? numToPx(errorRef.current?.getBoundingClientRect().height)
+                            : '0px',
+                        }}
+                      >
+                        <div className="contact__form-error-content" ref={errorRef}>
+                          <div className="contact__form-error-message">
+                            <Icon className="contact__form-error-icon" icon="error" />
+                            {statusError}
                           </div>
                         </div>
-                      )}
-                    </Transition>
-                  )}
-                </TransitionGroup>
-                <Button
-                  className={classNames('contact__button', `contact__button--${status}`, {
-                    'contact__button--hidden': prerender,
-                    'contact__button--sending': sending,
-                  })}
-                  style={getDelay(tokens.base.durationM, initDelay)}
-                  disabled={sending}
-                  loading={sending}
-                  loadingText="Sending..."
-                  icon="send"
-                  type="submit"
-                >
-                  Send Message
-                </Button>
-              </form>
-            )}
-          </Transition>
-        )}
-        {complete && (
+                      </div>
+                    )}
+                  </Transition>
+                )}
+              </TransitionGroup>
+              <Button
+                className={classNames('contact__button', `contact__button--${status}`, {
+                  'contact__button--hidden': prerender,
+                  'contact__button--sending': sending,
+                })}
+                style={getDelay(tokens.base.durationM, initDelay)}
+                disabled={sending}
+                loading={sending}
+                loadingText="Sending..."
+                icon="send"
+                type="submit"
+              >
+                Send Message
+              </Button>
+            </form>
+          )}
+        </Transition>
+
+        {/* {complete && (
           <Transition appear mountOnEnter unmountOnExit onEnter={reflow} timeout={0}>
             {status => (
               <div className="contact__complete" aria-live="polite">
@@ -239,7 +237,7 @@ const Contact = () => {
               </div>
             )}
           </Transition>
-        )}
+        )} */}
       </TransitionGroup>
     </Section>
   );
