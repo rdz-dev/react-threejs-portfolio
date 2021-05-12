@@ -26,12 +26,13 @@ import macbookPro from 'assets/macbook-pro.glb';
 import './index.css';
 
 const disciplines = [
-  'Frontend Dev',
-  'JavaScript',
-  'CSS',
-  'React.js',
+  'Full Stack',
+  'MEAN',
+  'React',
   'React Native',
   'Vue.js',
+  'Node.js',
+  'MongoDB',
 ];
 // related css: intro__title-word--plus
 

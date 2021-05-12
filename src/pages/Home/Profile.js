@@ -30,9 +30,9 @@ const ProfileText = ({ status, titleId }) => (
       className={classNames('profile__description', `profile__description--${status}`)}
       size="l"
     >
-      I’m Chao, currently I live in Vancouver working as a comprehensive front end
-      developer. My projects include Vue.js, React.js and React Native. Please feel free
-      to check out my <Link href="https://github.com/chaozhangdev">Github</Link> for other work. In my
+      I’m Chao, currently I live in Vancouver working as a software developer. My projects
+      include both web and mobile dev. Please feel free to check out my
+      <Link href="https://github.com/chaozhangdev">Github</Link> for other work. In my
       spare time, I love making some fun projects, teaching students coding and playing
       video games.
     </Text>
