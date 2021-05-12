@@ -25,7 +25,7 @@ import iphone11 from 'assets/iphone-11.glb';
 import macbookPro from 'assets/macbook-pro.glb';
 import './index.css';
 
-const disciplines = ['Designer', 'Engineer', 'Instructor', 'Gamer'];
+const disciplines = ['JavaScript', 'CSS', 'React.js', 'React Native', 'Vue.js'];
 
 const Home = () => {
   const { status } = useRouteTransition();
