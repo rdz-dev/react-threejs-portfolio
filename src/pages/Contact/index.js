@@ -49,7 +49,7 @@ const Contact = () => {
   const email = useFormInput('');
   const message = useFormInput('');
   const [sending, setSending] = useState(false);
-  const [complete, setComplete] = useState(false);
+  // const [complete, setComplete] = useState(false);
   const [statusError, setStatusError] = useState('');
   useScrollRestore();
 
@@ -85,7 +85,7 @@ const Contact = () => {
 
         if (statusError) throw new Error(statusError);
 
-        setComplete(true);
+        // setComplete(true);
         setSending(false);
       } catch (error) {
         setSending(false);
