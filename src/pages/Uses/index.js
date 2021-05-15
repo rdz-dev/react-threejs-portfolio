@@ -25,7 +25,7 @@ const Uses = () => {
   return (
     <Fragment>
       <Helmet>
-        <title>Research | Chao Zhang</title>
+        <title>Chao Zhang | Research</title>
         <meta name="description" content="Some research during my graduate stuides" />
       </Helmet>
       <ProjectContainer className="uses">
@@ -35,10 +35,13 @@ const Uses = () => {
           opacity={0.8}
           entered={!prerender}
         />
-        <ProjectHeader
-          title="Research"
-          description="During my graduate studies, I was highly interested in some topics related to computer science like computer graphics and image processing. At that time, I did some research and developed some interesting projects."
-        />
+        <div style={{ marginBottom: '-50px' }}>
+          <ProjectHeader
+            title="Research"
+            description="During my graduate studies, I was highly interested in some topics related to computer science like computer graphics and image processing. At that time, I did some research and developed some interesting projects."
+          />
+        </div>
+
         <ProjectSection first className="uses__section">
           <ProjectSectionContent>
             <ProjectTextRow width="m">
@@ -113,7 +116,9 @@ const Uses = () => {
           </ProjectSectionContent>
         </ProjectSection>
       </ProjectContainer>
-      <Footer />
+      <div style={{ marginTop: '100px' }}>
+        <Footer />
+      </div>
     </Fragment>
   );
 };

@@ -26,11 +26,10 @@ import macbookPro from 'assets/macbook-pro.glb';
 import './index.css';
 
 const disciplines = [
-  'Full Stack',
-  'MEAN',
+  'MERN Stack',
   'React',
-  'React Native',
   'Vue.js',
+  'React Native',
   'Node.js',
   'MongoDB',
 ];
