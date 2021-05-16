@@ -28,7 +28,7 @@ import './index.css';
 const disciplines = [
   'MERN Stack',
   'React',
-  'Vue.js',
+  'Vue',
   'React Native',
   'Node.js',
   'MongoDB',
