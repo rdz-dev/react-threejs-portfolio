@@ -7,7 +7,7 @@ import DecoderText from 'components/DecoderText';
 import Divider from 'components/Divider';
 import Image from 'components/Image';
 import Section from 'components/Section';
-import ProfileImg from 'assets/chao/me.jpg';
+import ProfileImg from 'assets/chao/chao.JPG';
 // import ProfileImgLarge from 'assets/profile-large.jpg';
 import ProfileImgPlaceholder from 'assets/profile-placeholder.jpg';
 import { reflow } from 'utils/transition';
