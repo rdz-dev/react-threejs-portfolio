@@ -105,7 +105,7 @@ const Home = () => {
 
     const handleHashchange = (hash, scroll) => {
       clearTimeout(scrollTimeout);
-      const hashSections = [intro, project1, about];
+      const hashSections = [intro, project5, about];
       const hashString = hash.replace('#', '');
       const element = hashSections.filter(item => item.current.id === hashString)[0];
       if (!element) return;
@@ -178,7 +178,7 @@ const Home = () => {
       />
 
       <ProjectSummary
-        id="project"
+        id="project-1"
         sectionRef={project5}
         visible={visibleSections.includes(project5.current)}
         title="Asian Gambling Platform"
