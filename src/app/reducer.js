@@ -1,11 +1,10 @@
 export const initialState = {
   menuOpen: false,
-  theme: 'dark',
+  theme: 'light',
 };
 
 export function reducer(state, action) {
   const { type, value } = action;
-
   switch (type) {
     case 'setTheme':
       return { ...state, theme: value };

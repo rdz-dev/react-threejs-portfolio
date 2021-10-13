@@ -11,7 +11,7 @@ import {
   ProjectTextRow,
 } from 'components/ProjectLayout';
 import Link from 'components/Link';
-import usesBackground from 'assets/uses-background.mp4';
+// import usesBackground from 'assets/uses-background.mp4';
 import usesBackgroundPlaceholder from 'assets/uses-background-placeholder.jpg';
 import prerender from 'utils/prerender';
 import { useScrollRestore } from 'hooks';
@@ -30,7 +30,7 @@ const Uses = () => {
       </Helmet>
       <ProjectContainer className="uses">
         <ProjectBackground
-          src={usesBackground}
+          // src={usesBackground}
           placeholder={usesBackgroundPlaceholder}
           opacity={0.8}
           entered={!prerender}

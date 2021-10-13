@@ -8,6 +8,8 @@ import { usePrefersReducedMotion, useRouteTransition } from 'hooks';
 import { useLocation } from 'react-router-dom';
 import codingFunImage from 'assets/chao/codingfun.png';
 import phoneBoxImage from 'assets/chao/phonebox.png';
+import asianLotteryImage from 'assets/chao/asian-lottery.png';
+import chiNoodleBarImage from 'assets/chao/chi-noodle.png';
 import reactThree from 'assets/chao/react-three.png';
 import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
 import sprTexture from 'assets/spr-lesson-builder-dark.jpg';
@@ -41,15 +43,26 @@ const Home = () => {
   const initHash = useRef(true);
   const [visibleSections, setVisibleSections] = useState([]);
   const [scrollIndicatorHidden, setScrollIndicatorHidden] = useState(false);
+
   const intro = useRef();
-  const projectOne = useRef();
-  const projectTwo = useRef();
-  const projectThree = useRef();
+  const project1 = useRef();
+  const project2 = useRef();
+  const project3 = useRef();
+  const project4 = useRef();
+  const project5 = useRef();
   const about = useRef();
   const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
-    const revealSections = [intro, projectOne, projectTwo, projectThree, about];
+    const revealSections = [
+      intro,
+      project1,
+      project2,
+      project3,
+      project4,
+      project5,
+      about,
+    ];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -92,7 +105,7 @@ const Home = () => {
 
     const handleHashchange = (hash, scroll) => {
       clearTimeout(scrollTimeout);
-      const hashSections = [intro, projectOne, about];
+      const hashSections = [intro, project1, about];
       const hashString = hash.replace('#', '');
       const element = hashSections.filter(item => item.current.id === hashString)[0];
       if (!element) return;
@@ -163,18 +176,36 @@ const Home = () => {
         disciplines={disciplines}
         scrollIndicatorHidden={scrollIndicatorHidden}
       />
+
       <ProjectSummary
-        id="project-1"
-        sectionRef={projectOne}
-        visible={visibleSections.includes(projectOne.current)}
-        index={1}
+        id="project"
+        sectionRef={project5}
+        visible={visibleSections.includes(project5.current)}
+        title="Asian Gambling Platform"
+        description="Gambling platform includes mark six lottery in version 1.0"
+        buttonText="View Website"
+        buttonLink="https://asian-lottery.netlify.app/"
+        model={{
+          type: 'laptop',
+          textures: [
+            {
+              src: sprTexture,
+              srcSet: `${asianLotteryImage} 800w, ${asianLotteryImage} 1440w`,
+              placeholder: sprTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+
+      <ProjectSummary
+        sectionRef={project4}
+        visible={visibleSections.includes(project4.current)}
         title="Telecommunication E-Commerce"
         description="Marketing site, sim card activation application and account self services area."
         buttonText="View Website"
         buttonLink="https://gophonebox.com"
         model={{
           type: 'laptop',
-          alt: 'PhoneBox',
           textures: [
             {
               src: sprTexture,
@@ -184,6 +215,67 @@ const Home = () => {
           ],
         }}
       />
+
+      <ProjectSummary
+        // alternate
+        sectionRef={project3}
+        visible={visibleSections.includes(project3.current)}
+        title="Online Coding Learning Platform"
+        description="A platform to let students quickly learn the fundamental of different programming languages in a fun way."
+        buttonText="View Website"
+        buttonLink="https://codingfunedu.com/"
+        model={{
+          type: 'laptop',
+          alt: 'CodingFun',
+          textures: [
+            {
+              src: sprTexture,
+              srcSet: `${codingFunImage} 800w, ${codingFunImage} 1440w`,
+              placeholder: sprTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+
+      <ProjectSummary
+        sectionRef={project2}
+        visible={visibleSections.includes(project2.current)}
+        title="Restaurant Marketing Website"
+        description="Mobile first marketing website."
+        buttonText="View Website"
+        buttonLink="https://chi-noodlebar.com/"
+        model={{
+          type: 'laptop',
+          textures: [
+            {
+              src: sliceTexture,
+              srcSet: `${chiNoodleBarImage} 980w, ${chiNoodleBarImage} 1376w`,
+              placeholder: sliceTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+
+      <ProjectSummary
+        sectionRef={project1}
+        visible={visibleSections.includes(project1.current)}
+        title="Computer Graphics Three.js Demo"
+        description="A demo for computer graphics by react & three.js"
+        buttonText="View Website"
+        buttonLink="https://computer-graphics-playground.vercel.app/"
+        model={{
+          type: 'laptop',
+          alt: 'demo',
+          textures: [
+            {
+              src: sliceTexture,
+              srcSet: `${reactThree} 980w, ${reactThree} 1376w`,
+              placeholder: sliceTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+
       {/* <ProjectSummary
         id="project-2"
         alternate
@@ -211,54 +303,13 @@ const Home = () => {
           ],
         }}
       /> */}
-      <ProjectSummary
-        id="project-2"
-        alternate
-        sectionRef={projectTwo}
-        visible={visibleSections.includes(projectTwo.current)}
-        index={2}
-        title="Online Coding Learning Platform"
-        description="A platform to let students quickly learn the fundamental of different programming languages in a fun way."
-        buttonText="View Website"
-        buttonLink="https://codingfun.dev/"
-        model={{
-          type: 'laptop',
-          alt: 'CodingFun',
-          textures: [
-            {
-              src: sprTexture,
-              srcSet: `${codingFunImage} 800w, ${codingFunImage} 1440w`,
-              placeholder: sprTexturePlaceholder,
-            },
-          ],
-        }}
-      />
-      <ProjectSummary
-        id="project-3"
-        sectionRef={projectThree}
-        visible={visibleSections.includes(projectThree.current)}
-        index={3}
-        title="Computer Graphics Three.js Demo"
-        description="A demo for computer graphics by react & three.js"
-        buttonText="View Website"
-        buttonLink="https://computer-graphics-playground.vercel.app/"
-        model={{
-          type: 'laptop',
-          alt: 'Computer Graphics Three.js Demo"',
-          textures: [
-            {
-              src: sliceTexture,
-              srcSet: `${reactThree} 980w, ${reactThree} 1376w`,
-              placeholder: sliceTexturePlaceholder,
-            },
-          ],
-        }}
-      />
+
       <Profile
         sectionRef={about}
         visible={visibleSections.includes(about.current)}
         id="about"
       />
+
       <Footer />
     </div>
   );
