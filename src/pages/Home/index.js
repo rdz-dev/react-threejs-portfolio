@@ -32,6 +32,7 @@ const disciplines = [
   'Vue.js',
   'React',
   'React Native',
+  'Flutter',
   'Node.js',
   'MongoDB',
 ];
@@ -182,7 +183,7 @@ const Home = () => {
         sectionRef={project5}
         visible={visibleSections.includes(project5.current)}
         title="Asian Gambling Platform"
-        description="Gambling platform includes mark six lottery in version 1.0"
+        description="Gambling platform includes mark six lottery - Beta Version 0.1"
         buttonText="View Website"
         buttonLink="https://asian-lottery.netlify.app/"
         model={{
