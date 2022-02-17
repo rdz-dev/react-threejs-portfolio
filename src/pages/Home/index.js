@@ -185,7 +185,7 @@ const Home = () => {
         title="Asian Gambling Platform"
         description="Gambling platform includes mark six lottery - Beta Version 0.1"
         buttonText="View Website"
-        buttonLink="https://asian-lottery.netlify.app/"
+        buttonLink="https://asianlottery.netlify.app/"
         model={{
           type: 'laptop',
           textures: [
