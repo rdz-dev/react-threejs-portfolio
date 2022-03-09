@@ -176,7 +176,7 @@ const Home = () => {
         title="Short Videos Web App"
         description="🥳 Tiktok like short video web app"
         buttonText="View Website"
-        buttonLink="https://richlink.app/"
+        buttonLink="https://vhot.live/"
         model={{
           type: 'laptop',
           textures: [
