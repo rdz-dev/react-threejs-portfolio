@@ -7,21 +7,13 @@ import Footer from 'components/Footer';
 import { usePrefersReducedMotion, useRouteTransition } from 'hooks';
 import { useLocation } from 'react-router-dom';
 import codingFunImage from 'assets/chao/codingfun.png';
-import phoneBoxImage from 'assets/chao/phonebox.png';
-import asianLotteryImage from 'assets/chao/asian-lottery.png';
+import vhotImage from 'assets/chao/vhot.png';
+import lolImage from 'assets/chao/lol.png';
 import chiNoodleBarImage from 'assets/chao/chi-noodle.png';
 import reactThree from 'assets/chao/react-three.png';
 import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
 import sprTexture from 'assets/spr-lesson-builder-dark.jpg';
-// import sprTextureLarge from 'assets/spr-lesson-builder-dark-large.jpg';
-// import gamestackTexturePlaceholder from 'assets/gamestack-login-placeholder.jpg';
-// import gamestackTexture from 'assets/gamestack-login.jpg';
-// import gamestackTextureLarge from 'assets/gamestack-login-large.jpg';
-// import gamestackTexture2Placeholder from 'assets/gamestack-list-placeholder.jpg';
-// import gamestackTexture2 from 'assets/gamestack-list.jpg';
-// import gamestackTexture2Large from 'assets/gamestack-list-large.jpg';
 import sliceTexture from 'assets/slice-app.jpg';
-// import sliceTextureLarge from 'assets/slice-app-large.jpg';
 import sliceTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
 import iphone11 from 'assets/iphone-11.glb';
 import macbookPro from 'assets/macbook-pro.glb';
@@ -177,21 +169,20 @@ const Home = () => {
         disciplines={disciplines}
         scrollIndicatorHidden={scrollIndicatorHidden}
       />
-
       <ProjectSummary
         id="project-1"
         sectionRef={project5}
         visible={visibleSections.includes(project5.current)}
-        title="Asian Gambling Platform"
-        description="Gambling platform includes mark six lottery - Beta Version 0.1"
+        title="Short Videos Web App"
+        description="🥳 Tiktok like short video web app"
         buttonText="View Website"
-        buttonLink="https://asianlottery.netlify.app/"
+        buttonLink="https://richlink.app/"
         model={{
           type: 'laptop',
           textures: [
             {
               src: sprTexture,
-              srcSet: `${asianLotteryImage} 800w, ${asianLotteryImage} 1440w`,
+              srcSet: `${vhotImage} 800w, ${vhotImage} 1440w`,
               placeholder: sprTexturePlaceholder,
             },
           ],
@@ -201,16 +192,16 @@ const Home = () => {
       <ProjectSummary
         sectionRef={project4}
         visible={visibleSections.includes(project4.current)}
-        title="Telecommunication E-Commerce"
-        description="Marketing site, sim card activation application and account self services area."
+        title="League of Legends Data"
+        description="🕹 League of legends game data - champions | items | summoners | factions."
         buttonText="View Website"
-        buttonLink="https://gophonebox.com"
+        buttonLink="https://league-of-legends-data.vercel.app/"
         model={{
           type: 'laptop',
           textures: [
             {
               src: sprTexture,
-              srcSet: `${phoneBoxImage} 800w, ${phoneBoxImage} 1440w`,
+              srcSet: `${lolImage} 800w, ${lolImage} 1440w`,
               placeholder: sprTexturePlaceholder,
             },
           ],
@@ -218,21 +209,20 @@ const Home = () => {
       />
 
       <ProjectSummary
-        // alternate
-        sectionRef={project3}
-        visible={visibleSections.includes(project3.current)}
-        title="Online Coding Learning Platform"
-        description="A platform to let students quickly learn the fundamental of different programming languages in a fun way."
+        sectionRef={project1}
+        visible={visibleSections.includes(project1.current)}
+        title="Computer Graphics Three.js Demo"
+        description="🌓 A demo for computer graphics by react & three.js"
         buttonText="View Website"
-        buttonLink="https://codingfunedu.com/"
+        buttonLink="https://computer-graphics-playground.vercel.app/"
         model={{
           type: 'laptop',
-          alt: 'CodingFun',
+          alt: 'demo',
           textures: [
             {
-              src: sprTexture,
-              srcSet: `${codingFunImage} 800w, ${codingFunImage} 1440w`,
-              placeholder: sprTexturePlaceholder,
+              src: sliceTexture,
+              srcSet: `${reactThree} 980w, ${reactThree} 1376w`,
+              placeholder: sliceTexturePlaceholder,
             },
           ],
         }}
@@ -242,7 +232,7 @@ const Home = () => {
         sectionRef={project2}
         visible={visibleSections.includes(project2.current)}
         title="Restaurant Marketing Website"
-        description="Mobile first marketing website."
+        description="🍱 Mobile first restaurant website."
         buttonText="View Website"
         buttonLink="https://chi-noodlebar.com/"
         model={{
@@ -258,20 +248,21 @@ const Home = () => {
       />
 
       <ProjectSummary
-        sectionRef={project1}
-        visible={visibleSections.includes(project1.current)}
-        title="Computer Graphics Three.js Demo"
-        description="A demo for computer graphics by react & three.js"
+        // alternate
+        sectionRef={project3}
+        visible={visibleSections.includes(project3.current)}
+        title="Online Coding Learning Platform"
+        description="💻 A platform to let students quickly learn the fundamental of different programming languages in a fun way."
         buttonText="View Website"
-        buttonLink="https://computer-graphics-playground.vercel.app/"
+        buttonLink="https://codingfunedu.com/"
         model={{
           type: 'laptop',
-          alt: 'demo',
+          alt: 'CodingFun',
           textures: [
             {
-              src: sliceTexture,
-              srcSet: `${reactThree} 980w, ${reactThree} 1376w`,
-              placeholder: sliceTexturePlaceholder,
+              src: sprTexture,
+              srcSet: `${codingFunImage} 800w, ${codingFunImage} 1440w`,
+              placeholder: sprTexturePlaceholder,
             },
           ],
         }}

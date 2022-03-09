@@ -33,8 +33,7 @@ const ProfileText = ({ status, titleId }) => (
       I’m Chao, currently I live in Vancouver working as a software developer. My projects
       include both web and mobile dev. Please feel free to check out my{' '}
       <Link href="https://github.com/chaozhangdev">Github</Link> for other work. In my
-      spare time, I love making some fun projects, teaching students coding and playing
-      video games.
+      spare time, I enjoy cooking, music and video games.
     </Text>
     <Text
       className={classNames('profile__description', `profile__description--${status}`)}
