@@ -9,6 +9,8 @@ import { useLocation } from 'react-router-dom';
 import codingFunImage from 'assets/chao/codingfun.png';
 import vhotImage from 'assets/chao/vhot.png';
 import lolImage from 'assets/chao/lol.png';
+import yexcImage from 'assets/chao/yexc.png';
+import rhImage from 'assets/chao/ch.png';
 import chiNoodleBarImage from 'assets/chao/chi-noodle.png';
 import reactThree from 'assets/chao/react-three.png';
 import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
@@ -21,10 +23,9 @@ import './index.css';
 
 const disciplines = [
   'MERN Stack',
-  'Vue.js',
   'React',
   'React Native',
-  'Flutter',
+  'Vue.js',
   'Node.js',
   'MongoDB',
 ];
@@ -169,48 +170,51 @@ const Home = () => {
         disciplines={disciplines}
         scrollIndicatorHidden={scrollIndicatorHidden}
       />
-      <ProjectSummary
-        id="project-1"
-        sectionRef={project5}
-        visible={visibleSections.includes(project5.current)}
-        title="Short Videos Web App"
-        description="🥳 Tiktok like short video web app"
-        buttonText="View Website"
-        buttonLink="https://vhot.live/"
-        model={{
-          type: 'laptop',
-          textures: [
-            {
-              src: sprTexture,
-              srcSet: `${vhotImage} 800w, ${vhotImage} 1440w`,
-              placeholder: sprTexturePlaceholder,
-            },
-          ],
-        }}
-      />
-
-      <ProjectSummary
-        sectionRef={project4}
-        visible={visibleSections.includes(project4.current)}
-        title="League of Legends Data"
-        description="🕹 League of legends game data - champions | items | summoners | factions."
-        buttonText="View Website"
-        buttonLink="https://league-of-legends-data.vercel.app/"
-        model={{
-          type: 'laptop',
-          textures: [
-            {
-              src: sprTexture,
-              srcSet: `${lolImage} 800w, ${lolImage} 1440w`,
-              placeholder: sprTexturePlaceholder,
-            },
-          ],
-        }}
-      />
 
       <ProjectSummary
         sectionRef={project1}
         visible={visibleSections.includes(project1.current)}
+        title="Cryptocurrency Exchange"
+        description="Simple, Professional and Safe trading experience."
+        buttonText="View Website"
+        buttonLink="https://yexc.com/"
+        model={{
+          type: 'laptop',
+          textures: [
+            {
+              src: sprTexture,
+              srcSet: `${yexcImage} 800w, ${yexcImage} 1440w`,
+              placeholder: sprTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+
+      <ProjectSummary
+        // id="project-2"
+
+        sectionRef={project2}
+        visible={visibleSections.includes(project2.current)}
+        title="Crypto Hero"
+        description="🕹 Web3 game for fun NFT trade and staking. Earn profits anytime & anywhere."
+        buttonText="View Website"
+        buttonLink="https://cryptohero.game/"
+        model={{
+          type: 'laptop',
+          textures: [
+            {
+              src: sprTexture,
+              srcSet: `${rhImage} 800w, ${rhImage} 1440w`,
+              placeholder: sprTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+
+      <ProjectSummary
+        // id="project-3"
+        sectionRef={project3}
+        visible={visibleSections.includes(project3.current)}
         title="Computer Graphics Three.js Demo"
         description="🌓 A demo for computer graphics by react & three.js"
         buttonText="View Website"
@@ -229,32 +233,13 @@ const Home = () => {
       />
 
       <ProjectSummary
-        sectionRef={project2}
-        visible={visibleSections.includes(project2.current)}
-        title="Restaurant Marketing Website"
-        description="🍱 Mobile first restaurant website."
-        buttonText="View Website"
-        buttonLink="https://chi-noodlebar.com/"
-        model={{
-          type: 'laptop',
-          textures: [
-            {
-              src: sliceTexture,
-              srcSet: `${chiNoodleBarImage} 980w, ${chiNoodleBarImage} 1376w`,
-              placeholder: sliceTexturePlaceholder,
-            },
-          ],
-        }}
-      />
-
-      <ProjectSummary
-        // alternate
-        sectionRef={project3}
-        visible={visibleSections.includes(project3.current)}
+        // id="project-4"
+        sectionRef={project4}
+        visible={visibleSections.includes(project4.current)}
         title="Online Coding Learning Platform"
         description="💻 A platform to let students quickly learn the fundamental of different programming languages in a fun way."
         buttonText="View Website"
-        buttonLink="https://codingfunedu.com/"
+        buttonLink="https://codingfun.io/"
         model={{
           type: 'laptop',
           alt: 'CodingFun',
@@ -262,6 +247,27 @@ const Home = () => {
             {
               src: sprTexture,
               srcSet: `${codingFunImage} 800w, ${codingFunImage} 1440w`,
+              placeholder: sprTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+
+      <ProjectSummary
+        // id="project-5"
+        id="project-1"
+        sectionRef={project5}
+        visible={visibleSections.includes(project5.current)}
+        title="Short Videos Web App"
+        description="🥳 Tiktok like short video web app"
+        buttonText="View Website"
+        buttonLink="https://vhot.live/recomandation"
+        model={{
+          type: 'laptop',
+          textures: [
+            {
+              src: sprTexture,
+              srcSet: `${vhotImage} 800w, ${vhotImage} 1440w`,
               placeholder: sprTexturePlaceholder,
             },
           ],
