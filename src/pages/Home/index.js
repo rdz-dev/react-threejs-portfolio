@@ -10,7 +10,7 @@ import codingFunImage from 'assets/chao/codingfun.png';
 import vhotImage from 'assets/chao/vhot.png';
 import lolImage from 'assets/chao/lol.png';
 import yexcImage from 'assets/chao/yexc.png';
-import rhImage from 'assets/chao/ch.png';
+import chImage from 'assets/chao/ch.png';
 import chiNoodleBarImage from 'assets/chao/chi-noodle.png';
 import reactThree from 'assets/chao/react-three.png';
 import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
@@ -21,14 +21,7 @@ import iphone11 from 'assets/iphone-11.glb';
 import macbookPro from 'assets/macbook-pro.glb';
 import './index.css';
 
-const disciplines = [
-  'MERN Stack',
-  'React',
-  'React Native',
-  'Vue.js',
-  'Node.js',
-  'MongoDB',
-];
+const disciplines = ['MERN Stack', 'React', 'React Native', 'Vue', 'Node', 'MongoDB'];
 // related css: intro__title-word--plus
 
 const Home = () => {
@@ -172,10 +165,30 @@ const Home = () => {
       />
 
       <ProjectSummary
+        // id="project-2"
+        sectionRef={project2}
+        visible={visibleSections.includes(project2.current)}
+        title="Crypto Hero"
+        description="🕹 Web3 idle game. Earn your rewards anytime, anywhere."
+        buttonText="View Website"
+        buttonLink="https://cryptohero.game/"
+        model={{
+          type: 'laptop',
+          textures: [
+            {
+              src: sprTexture,
+              srcSet: `${chImage} 800w, ${chImage} 1440w`,
+              placeholder: sprTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+
+      <ProjectSummary
         sectionRef={project1}
         visible={visibleSections.includes(project1.current)}
-        title="Cryptocurrency Exchange"
-        description="Simple, Professional and Safe trading experience."
+        title="Buy & Sell Cryptocurrency"
+        description="A simple, professional, and secure trading experience."
         buttonText="View Website"
         buttonLink="https://yexc.com/"
         model={{
@@ -184,27 +197,6 @@ const Home = () => {
             {
               src: sprTexture,
               srcSet: `${yexcImage} 800w, ${yexcImage} 1440w`,
-              placeholder: sprTexturePlaceholder,
-            },
-          ],
-        }}
-      />
-
-      <ProjectSummary
-        // id="project-2"
-
-        sectionRef={project2}
-        visible={visibleSections.includes(project2.current)}
-        title="Crypto Hero"
-        description="🕹 Web3 game for fun NFT trade and staking. Earn profits anytime & anywhere."
-        buttonText="View Website"
-        buttonLink="https://cryptohero.game/"
-        model={{
-          type: 'laptop',
-          textures: [
-            {
-              src: sprTexture,
-              srcSet: `${rhImage} 800w, ${rhImage} 1440w`,
               placeholder: sprTexturePlaceholder,
             },
           ],
