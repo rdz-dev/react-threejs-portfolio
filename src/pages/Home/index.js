@@ -8,10 +8,10 @@ import { usePrefersReducedMotion, useRouteTransition } from 'hooks';
 import { useLocation } from 'react-router-dom';
 import codingFunImage from 'assets/chao/codingfun.png';
 import vhotImage from 'assets/chao/vhot.png';
-import lolImage from 'assets/chao/lol.png';
+// import lolImage from 'assets/chao/lol.png';
 import yexcImage from 'assets/chao/yexc.png';
 import chImage from 'assets/chao/ch.png';
-import chiNoodleBarImage from 'assets/chao/chi-noodle.png';
+// import chiNoodleBarImage from 'assets/chao/chi-noodle.png';
 import reactThree from 'assets/chao/react-three.png';
 import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
 import sprTexture from 'assets/spr-lesson-builder-dark.jpg';
@@ -21,7 +21,18 @@ import iphone11 from 'assets/iphone-11.glb';
 import macbookPro from 'assets/macbook-pro.glb';
 import './index.css';
 
-const disciplines = ['MERN Stack', 'React', 'React Native', 'Vue', 'Node', 'MongoDB'];
+const disciplines = [
+  'MERN Stack',
+  'HTML CSS JS',
+  'TypeScript',
+  'React',
+  'React Native',
+  'Vue',
+  'Node',
+  'MongoDB',
+  'PostgreSQL',
+  'Docker',
+];
 // related css: intro__title-word--plus
 
 const Home = () => {
@@ -149,10 +160,10 @@ const Home = () => {
   return (
     <div className="home">
       <Helmet>
-        <title>Chao Zhang | Developer</title>
+        <title>Chao Zhang | Portfolio</title>
         <meta
           name="description"
-          content="Portfolio of Chao Zhang – a software developer focusing on front-end development and ui/ux design."
+          content="Chao Zhang's Portfolio – Developer, Designer, and Creative Enthusiast. Passionate about bringing innovative ideas to life."
         />
         <link rel="prefetch" href={iphone11} as="fetch" crossorigin="" />
         <link rel="prefetch" href={macbookPro} as="fetch" crossorigin="" />
@@ -165,9 +176,9 @@ const Home = () => {
       />
 
       <ProjectSummary
-        // id="project-2"
-        sectionRef={project2}
-        visible={visibleSections.includes(project2.current)}
+        id="project-1"
+        sectionRef={project5}
+        visible={visibleSections.includes(project5.current)}
         title="Crypto Hero"
         description="🕹 Web3 idle game. Earn your rewards anytime, anywhere."
         buttonText="View Website"
@@ -185,8 +196,9 @@ const Home = () => {
       />
 
       <ProjectSummary
-        sectionRef={project1}
-        visible={visibleSections.includes(project1.current)}
+        id="project-2"
+        sectionRef={project2}
+        visible={visibleSections.includes(project2.current)}
         title="Buy & Sell Cryptocurrency"
         description="A simple, professional, and secure trading experience."
         buttonText="View Website"
@@ -204,7 +216,7 @@ const Home = () => {
       />
 
       <ProjectSummary
-        // id="project-3"
+        id="project-3"
         sectionRef={project3}
         visible={visibleSections.includes(project3.current)}
         title="Computer Graphics Three.js Demo"
@@ -225,7 +237,7 @@ const Home = () => {
       />
 
       <ProjectSummary
-        // id="project-4"
+        id="project-4"
         sectionRef={project4}
         visible={visibleSections.includes(project4.current)}
         title="Online Coding Learning Platform"
@@ -246,10 +258,9 @@ const Home = () => {
       />
 
       <ProjectSummary
-        // id="project-5"
         id="project-1"
-        sectionRef={project5}
-        visible={visibleSections.includes(project5.current)}
+        sectionRef={project1}
+        visible={visibleSections.includes(project1.current)}
         title="Short Videos Web App"
         description="🥳 Tiktok like short video web app"
         buttonText="View Website"
