@@ -202,7 +202,7 @@ const Home = () => {
         title="Buy & Sell Cryptocurrency"
         description="A simple, professional, and secure trading experience."
         buttonText="View Website"
-        buttonLink="https://yexc.com/"
+        buttonLink="https://ezcoin.io/"
         model={{
           type: 'laptop',
           textures: [
