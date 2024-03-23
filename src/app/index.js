@@ -30,7 +30,7 @@ export const TransitionContext = createContext();
 const repoPrompt = ``;
 
 const App = () => {
-  const [storedTheme] = useLocalStorage('theme', 'light');
+  const [storedTheme] = useLocalStorage('theme', 'dark');
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
