@@ -180,7 +180,7 @@ const Home = () => {
         sectionRef={project5}
         visible={visibleSections.includes(project5.current)}
         title="Crypto Hero"
-        description="🕹 Web3 idle game. Earn your rewards anytime, anywhere."
+        description="🕹 An idle game powered by Web3, allowing players to earn rewards at their convenience, from any location."
         buttonText="View Website"
         buttonLink="https://cryptohero.game/"
         model={{
@@ -200,7 +200,7 @@ const Home = () => {
         sectionRef={project2}
         visible={visibleSections.includes(project2.current)}
         title="Buy & Sell Cryptocurrency"
-        description="A simple, professional, and secure trading experience."
+        description="🪙 A streamlined, secure, and professional trading platform."
         buttonText="View Website"
         buttonLink="https://ezcoin.io/"
         model={{
@@ -220,7 +220,7 @@ const Home = () => {
         sectionRef={project3}
         visible={visibleSections.includes(project3.current)}
         title="Computer Graphics Three.js Demo"
-        description="🌓 A demo for computer graphics by react & three.js"
+        description="📦 A 3D rendering demo showcasing computer graphics capabilities."
         buttonText="View Website"
         buttonLink="https://computer-graphics-playground.vercel.app/"
         model={{
@@ -241,7 +241,7 @@ const Home = () => {
         sectionRef={project4}
         visible={visibleSections.includes(project4.current)}
         title="Online Coding Learning Platform"
-        description="💻 A platform to let students quickly learn the fundamental of different programming languages in a fun way."
+        description="💻 A platform designed to make learning the fundamentals of various programming languages enjoyable and efficient for students."
         buttonText="View Website"
         buttonLink="https://codingfun.io/"
         model={{
@@ -262,7 +262,7 @@ const Home = () => {
         sectionRef={project1}
         visible={visibleSections.includes(project1.current)}
         title="Short Videos Web App"
-        description="🥳 Tiktok like short video web app"
+        description="🥳 A web application similar to TikTok, enabling users to create and share short videos with ease."
         buttonText="View Website"
         buttonLink="https://vhot.live/recomandation"
         model={{
