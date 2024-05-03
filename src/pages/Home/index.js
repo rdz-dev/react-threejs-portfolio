@@ -264,7 +264,7 @@ const Home = () => {
         title="Short Videos Web App"
         description="🥳 A web application similar to TikTok, enabling users to create and share short videos with ease."
         buttonText="View Website"
-        buttonLink="https://vhot.live/recomandation"
+        buttonLink="https://apps.apple.com/my/app/vhot/id1663976918"
         model={{
           type: 'laptop',
           textures: [

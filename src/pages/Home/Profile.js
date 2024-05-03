@@ -39,7 +39,7 @@ const ProfileText = ({ status, titleId }) => (
       className={classNames('profile__description', `profile__description--${status}`)}
       size="l"
     >
-      I established <Link href="https://codingfunedu.com/">Coding Fun Education</Link> in
+      I established <Link href="https://www.codingfun.io/">Coding Fun Education</Link> in
       2019 Sep to provide students with online coding education. It lets students quickly
       learn the fundamental of different programming languages in a fun way.
     </Text>
