@@ -25,7 +25,7 @@ const Uses = () => {
   return (
     <Fragment>
       <Helmet>
-        <title>Chao Zhang | Research</title>
+        <title>Raiden Zhang | Research</title>
         <meta name="description" content="Some research during my graduate stuides" />
       </Helmet>
       <ProjectContainer className="uses">
@@ -46,7 +46,7 @@ const Uses = () => {
           <ProjectSectionContent>
             <ProjectTextRow width="m">
               <ProjectSectionHeading>
-                <Link href="https://github.com/chaozhangdev/computer-graphics">
+                <Link href="https://github.com/rdz-dev/computer-graphics">
                   Computer Graphics
                 </Link>
               </ProjectSectionHeading>
@@ -64,7 +64,7 @@ const Uses = () => {
           <ProjectSectionContent>
             <ProjectTextRow stretch width="m">
               <ProjectSectionHeading>
-                <Link href="https://github.com/chaozhangdev/image-processing">
+                <Link href="https://github.com/rdz-dev/image-processing">
                   Image Processing
                 </Link>
               </ProjectSectionHeading>
@@ -84,9 +84,7 @@ const Uses = () => {
           <ProjectSectionContent>
             <ProjectTextRow width="m">
               <ProjectSectionHeading>
-                <Link href="https://github.com/chaozhangdev/gis-navigation-toolbox">
-                  GIS
-                </Link>
+                <Link href="https://github.com/rdz-dev/gis-navigation-toolbox">GIS</Link>
               </ProjectSectionHeading>
               <ProjectSectionText>
                 <p>
@@ -102,9 +100,7 @@ const Uses = () => {
           <ProjectSectionContent>
             <ProjectTextRow width="m">
               <ProjectSectionHeading>
-                <Link href="https://github.com/chaozhangdev/steganography">
-                  Steganography
-                </Link>
+                <Link href="https://github.com/rdz-dev/steganography">Steganography</Link>
               </ProjectSectionHeading>
               <ProjectSectionText>
                 <p>

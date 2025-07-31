@@ -27,12 +27,12 @@ export const socialLinks = [
   // },
   {
     label: 'Github',
-    url: 'https://github.com/chaozhangdev',
+    url: 'https://github.com/rdz-dev',
     icon: 'github',
   },
   // {
   //   label: 'Linkedin',
-  //   url: 'https://www.linkedin.com/in/chao-zhang-727b8b15b/',
+  //   url: 'https://www.linkedin.com/in/raidenz/',
   //   icon: 'linkedin',
   // },
 ];

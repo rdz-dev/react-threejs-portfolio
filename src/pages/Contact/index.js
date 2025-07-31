@@ -98,14 +98,13 @@ const Contact = () => {
   return (
     <Section className={classNames('contact', `contact--${status}`)}>
       <Helmet>
-        <title>Contact | Chao Zhang</title>
+        <title>Contact | Raiden Zhang</title>
         <meta
           name="description"
           content="Send me a message if you’re interested in discussing a project or if you just want to say hi"
         />
       </Helmet>
       <TransitionGroup component={null}>
-        
         <Transition appear mountOnEnter unmountOnExit timeout={1600} onEnter={reflow}>
           {status => (
             <form className="contact__form" method="post" onSubmit={onSubmit}>

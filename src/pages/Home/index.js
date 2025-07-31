@@ -7,7 +7,6 @@ import Footer from 'components/Footer';
 import { usePrefersReducedMotion, useRouteTransition } from 'hooks';
 import { useLocation } from 'react-router-dom';
 import codingFunImage from 'assets/chao/codingfun.png';
-import vhotImage from 'assets/chao/vhot.png';
 // import lolImage from 'assets/chao/lol.png';
 import yexcImage from 'assets/chao/yexc.png';
 import chImage from 'assets/chao/ch.png';
@@ -22,15 +21,16 @@ import macbookPro from 'assets/macbook-pro.glb';
 import './index.css';
 
 const disciplines = [
-  'MERN Stack',
-  'HTML CSS JS',
   'TypeScript',
+  'Node',
   'React',
   'React Native',
-  'Vue',
-  'Node',
-  'MongoDB',
+  'Flutter',
+  'Python',
+  'Go',
   'PostgreSQL',
+  'MongoDB',
+  'Vue',
   'Docker',
 ];
 // related css: intro__title-word--plus
@@ -43,7 +43,6 @@ const Home = () => {
   const [scrollIndicatorHidden, setScrollIndicatorHidden] = useState(false);
 
   const intro = useRef();
-  const project1 = useRef();
   const project2 = useRef();
   const project3 = useRef();
   const project4 = useRef();
@@ -52,15 +51,7 @@ const Home = () => {
   const prefersReducedMotion = usePrefersReducedMotion();
 
   useEffect(() => {
-    const revealSections = [
-      intro,
-      project1,
-      project2,
-      project3,
-      project4,
-      project5,
-      about,
-    ];
+    const revealSections = [intro, project2, project3, project4, project5, about];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -160,10 +151,10 @@ const Home = () => {
   return (
     <div className="home">
       <Helmet>
-        <title>Chao Zhang | Portfolio</title>
+        <title>Raiden Zhang | Portfolio</title>
         <meta
           name="description"
-          content="Chao Zhang's Portfolio – Developer, Designer, and Creative Enthusiast. Passionate about bringing innovative ideas to life."
+          content="Raiden Zhang's Portfolio – Developer, Designer, and Creative Enthusiast. Passionate about bringing innovative ideas to life."
         />
         <link rel="prefetch" href={iphone11} as="fetch" crossorigin="" />
         <link rel="prefetch" href={macbookPro} as="fetch" crossorigin="" />
@@ -176,13 +167,12 @@ const Home = () => {
       />
 
       <ProjectSummary
-        id="project-1"
         sectionRef={project5}
         visible={visibleSections.includes(project5.current)}
         title="Crypto Hero"
         description="🕹 An idle game powered by Web3, allowing players to earn rewards at their convenience, from any location."
         buttonText="View Website"
-        buttonLink="https://cryptohero.game/"
+        buttonLink="https://cryptohero.games/"
         model={{
           type: 'laptop',
           textures: [
@@ -243,7 +233,7 @@ const Home = () => {
         title="Online Coding Learning Platform"
         description="💻 A platform designed to make learning the fundamentals of various programming languages enjoyable and efficient for students."
         buttonText="View Website"
-        buttonLink="https://codingfun.io/"
+        buttonLink="https://codingfun.vercel.app/"
         model={{
           type: 'laptop',
           alt: 'CodingFun',
@@ -251,26 +241,6 @@ const Home = () => {
             {
               src: sprTexture,
               srcSet: `${codingFunImage} 800w, ${codingFunImage} 1440w`,
-              placeholder: sprTexturePlaceholder,
-            },
-          ],
-        }}
-      />
-
-      <ProjectSummary
-        id="project-1"
-        sectionRef={project1}
-        visible={visibleSections.includes(project1.current)}
-        title="Short Videos Web App"
-        description="🥳 A web application similar to TikTok, enabling users to create and share short videos with ease."
-        buttonText="View Website"
-        buttonLink="https://apps.apple.com/my/app/vhot/id1663976918"
-        model={{
-          type: 'laptop',
-          textures: [
-            {
-              src: sprTexture,
-              srcSet: `${vhotImage} 800w, ${vhotImage} 1440w`,
               placeholder: sprTexturePlaceholder,
             },
           ],

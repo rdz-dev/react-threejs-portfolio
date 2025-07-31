@@ -30,18 +30,18 @@ const ProfileText = ({ status, titleId }) => (
       className={classNames('profile__description', `profile__description--${status}`)}
       size="l"
     >
-      I’m Chao, currently I live in Vancouver working as a software developer. My projects
-      include both web and mobile dev. Please feel free to check out my{' '}
-      <Link href="https://github.com/chaozhangdev">Github</Link> for other work. In my
-      spare time, I enjoy cooking, music and video games.
+      I’m Raiden, currently I live in Vancouver working as a Software Engineer. My
+      projects include both web and mobile dev. Please feel free to check out my{' '}
+      <Link href="https://github.com/rdz-dev">Github</Link> for other work. In my spare
+      time, I enjoy traveling, music and video games.
     </Text>
     <Text
       className={classNames('profile__description', `profile__description--${status}`)}
       size="l"
     >
-      I established <Link href="https://www.codingfun.io/">Coding Fun Education</Link> in
-      2019 Sep to provide students with online coding education. It lets students quickly
-      learn the fundamental of different programming languages in a fun way.
+      I established <Link href="https://codingfun.vercel.app/">Coding Fun Education</Link>{' '}
+      in 2019 Sep to provide students with online coding education. It lets students
+      quickly learn the fundamental of different programming languages in a fun way.
     </Text>
   </Fragment>
 );
